@@ -1,0 +1,75 @@
+LECTURE (ONE TO THREE) CONTENTS---
+
+FILE ---------(APP.JS)
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+/*
+    <div id="parent">
+        <div id="child">
+            <h1>I'm H1 tag</h1>
+            <h2>I'm H2 tag</h2>
+        </div>
+        <div id="child">
+            <h1>I'm H1 tag</h1>
+            <h2>I'm H2 tag</h2>
+        </div>
+    </div>
+
+
+*/ 
+// Core React ------------------------------------------------------------------------------------------------------------------
+
+// const parent = React.createElement("div", {id:"parent"}, 
+//         [
+//             React.createElement("div", {id:"child"}, 
+//         [React.createElement("h1", {id:"heading1"}, "I'm H1 Tag"),
+//          React.createElement("h2", {id:"heading2"}, "I'm H2 Tag")
+//     ]
+//         ),
+//         React.createElement("div", {id:"child2"}, 
+//         [React.createElement("h1", {id:"heading1"}, "I'm H1 Tag"),
+//          React.createElement("h2", {id:"heading2"}, "I'm H2 Tag")
+//     ]
+//         )
+//         ]
+// )
+
+
+
+// JSX ------------------------------------------------------------------------------------------------------------------
+
+// React Element 
+const heading = (
+    <h1 className="heading"> This is your react jsx heading🚀</h1>
+)
+
+// React Component
+const Title = () => {
+    return (
+        <div className="title">
+            <h1>This is functional component Title</h1>
+        </div>
+    )
+}
+
+// Component composition 
+const HeadingComponent = () => {
+    return (
+        
+        <div className = "conatiner">
+            <Title />
+            <h1>This is functional component from ReactJS</h1>
+        </div>
+    )
+}
+
+
+// const heading = React.createElement("h1", {id:"heading"}, "Hello World! From React ");
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent/>);
+
+
+LECTURE 4 (CONTENTS) ------
