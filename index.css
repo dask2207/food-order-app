@@ -142,7 +142,7 @@
 .search-box{
     height: 30px;
     padding: 2px 0px;
-    
+
 }
 
 .search-btn{
@@ -158,4 +158,10 @@
 
 .filter{
     display: flex;
+}
+
+.user-card{
+    padding: 10px;
+    border: solid 1px black;
+    margin-bottom: 10px;
 }
