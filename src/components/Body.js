@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 // import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
 
@@ -25,6 +26,11 @@ const Body = () => {
         setListOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurents(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
+
+
+    const onlineStatus = useOnlineStatus();
+
+    if(onlineStatus === false) return <h1>Look Like You Are Offline! Please Check Your Internat.</h1>
 
     // Condinational Rebdering
     // if(listOfRestaurents.length === 0){
@@ -53,8 +59,8 @@ const Body = () => {
                 <button className="filter-btn"
                     onClick={
                         () => {
-                            const filteredList = listOfRestaurents.filter((res)=>res.info.avgRating > 4);
-                            setListOfRestaurants(filteredList);
+                            const filteredList = filteredRestaurents.filter((res)=>res.info.avgRating > 4);
+                            setFilteredRestaurents(filteredList);
                         }
                 }>Top Rated Restaurants</button>
             </div>
@@ -63,7 +69,7 @@ const Body = () => {
                 {
                 filteredRestaurents.map((resturant, index) => 
                 
-                <Link key={resturant.info.id } to={"/restaurent/"+ resturant.info.id}><Card resData={resturant}/></Link>
+                <Link className="body-anchor" key={resturant.info.id } to={"/restaurent/"+ resturant.info.id}><Card resData={resturant}/></Link>
                 )
             } </div>
         </div>
