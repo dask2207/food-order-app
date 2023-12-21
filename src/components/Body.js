@@ -1,9 +1,10 @@
-import Card from "./Card";
-import { useState, useEffect } from "react";
+import Card, {withPromotedLabel} from "./Card";
+import { useState, useEffect, useContext } from "react";
 // import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -11,6 +12,11 @@ const Body = () => {
     const [filteredRestaurents, setFilteredRestaurents] = useState([]);
 
     const [searchText, setSearchTest] = useState("");
+
+
+    // console.log(listOfRestaurents);
+
+    const RestaurantCardPromoted = withPromotedLabel(Card);
 
     useEffect(() => {
         fetchData();
@@ -41,6 +47,8 @@ const Body = () => {
 
     // Now we use ternary operator insted of if condition 
 
+    const {loggedInUser, setUserName} = useContext(UserContext);
+
     return listOfRestaurents.length === 0 ? <Shimmer /> : (
         <div className="body-container">
             <div className="flex">
@@ -67,13 +75,25 @@ const Body = () => {
                             }
                         }>Top Rated Restaurants</button>
                 </div>
+
+                <div className="flex items-center">
+                    <label>User Name : </label>
+                    <input className="border border-solid border-black px-8 py-3 outline-none rounded-lg  ms-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
+                </div>
             </div>
 
             <div className="flex flex-wrap">
                 {
                     filteredRestaurents.map((resturant, index) =>
 
-                        <Link className="body-anchor" key={resturant.info.id} to={"/restaurent/" + resturant.info.id}><Card resData={resturant} /></Link>
+                        <Link 
+                        className="body-anchor" key={resturant.info.id}
+                         to={"/restaurent/" + resturant.info.id}>
+
+                            {/* If the restaurant is promoted then add a promoted label on it  */}
+                            {resturant.info.isOpen ? (<RestaurantCardPromoted resData={resturant} />) : (<Card resData={resturant} />)}
+                            
+                            </Link>
                     )
                 } </div>
         </div>
