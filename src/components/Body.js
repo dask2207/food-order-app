@@ -78,7 +78,7 @@ const Body = () => {
 
                 <div className="flex items-center">
                     <label>User Name : </label>
-                    <input className="border border-solid border-black px-8 py-3 outline-none rounded-lg  ms-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
+                    <input className="border border-solid border-grey px-8 py-3 outline-none rounded-lg  ms-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
                 </div>
             </div>
 
