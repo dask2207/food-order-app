@@ -24,7 +24,7 @@ const RestaurentMenu = () => {
         (c) => c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     )
 
-    console.log(categories);
+    // console.log(categories);
 
     return (
         <div className="text-center">
@@ -45,13 +45,7 @@ const RestaurentMenu = () => {
                 key={category?.card?.card?.title} 
                 data = {category?.card?.card}
                 showItems={index === showIndex ? true : false}
-                setShowIndex={() => {
-                    if(showIndex == null ){
-                        setShowIndex(index)
-                    } else{
-                        setShowIndex(null)
-                    }
-                }}
+                setShowIndex={() => setShowIndex((prevIndex) => (prevIndex === index ? null : index))}
             />
             ))}
 
