@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
-import { LOGO_URL } from "../utils/constant";
+// import { LOGO_URL } from "../utils/constant";
+import logo from '../images/namaste-logo.png'
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -17,14 +18,14 @@ const Header = () => {
     console.log(cartItems);
 
     return (
-    <div className=" flex justify-between  shadow-md w-full">
+    <div className=" flex justify-between  shadow-md w-full bg-gray-800 text-white">
         <div className="logo-container p-5 px-10">
-            <img src={LOGO_URL}  alt="Logo" className="w-24" />
+            <img src={logo}  alt="Logo" className="w-[85px]" />
         </div>
 
         <div className="flex items-center ">
             <ul className="flex p-4 m-4 font-normal text-lg">
-                <li className="p-4 ">Online Status : { onlineStatus ? "✅" : "🔴"}</li>
+                <li className="p-4 ">{ onlineStatus ? "Online ✅" : "Offline 🔴"}</li>
                 <li className="p-4"><Link to="/" className="navLink">Home</Link></li>
                 <li className="p-4"><Link to="/about" className="navLink">About us</Link></li>
                 <li className="p-4"><Link to="/contact" className="navLink">Contact us</Link></li>

@@ -11,7 +11,7 @@ const Card = (props) => {
     } = resData ?. info;
     return (
 
-        <div className="m-4 p-4 w-[222px] bg-gray-200 h-[350px] hover:bg-gray-300 rounded-lg">
+        <div className="m-4 p-4 w-[245px] bg-gray-200 h-[350px] hover:bg-gray-300 rounded-lg">
             <img src={
                     CDN_URL + cloudinaryImageId
                 }
