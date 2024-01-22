@@ -11,12 +11,12 @@ const Header = () => {
     const {loggedInUser} = useContext(UserContext);
 
     return (
-    <div className="flex justify-between  shadow-md">
+    <div className=" flex justify-between  shadow-md ">
         <div className="logo-container p-5 px-10">
             <img src={LOGO_URL}  alt="Logo" className="w-24" />
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center ">
             <ul className="flex p-4 m-4 font-normal text-lg">
                 <li className="p-4 ">Online Status : { onlineStatus ? "✅" : "🔴"}</li>
                 <li className="p-4"><Link to="/" className="navLink">Home</Link></li>
@@ -36,3 +36,4 @@ const Header = () => {
 
 
 export default Header;
+
