@@ -11,7 +11,7 @@ const Card = (props) => {
     } = resData ?. info;
     return (
 
-        <div className="m-4 p-4 w-[222px] bg-gray-200 h-[370px] hover:bg-gray-300 rounded-lg">
+        <div className="m-4 p-4 w-[222px] bg-gray-200 h-[350px] hover:bg-gray-300 rounded-lg">
             <img src={
                     CDN_URL + cloudinaryImageId
                 }
@@ -19,7 +19,7 @@ const Card = (props) => {
            
            <h3 className="p-1 pt-2 font-bold">{name}</h3>
             <h4 className="p-1">{
-                cuisines.join(", ")
+                cuisines.slice(0, 2).join(' ,') + " ..."
             }</h4>
             <h4 className="p-1">{avgRating} stars</h4>
             <h4 className="p-1">{costForTwo}</h4>
