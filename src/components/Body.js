@@ -50,7 +50,7 @@ const Body = () => {
     const {loggedInUser, setUserName} = useContext(UserContext);
 
     return listOfRestaurents.length === 0 ? <Shimmer /> : (
-        <div className="body-container">
+        <div className="body-container " >
             <div className="flex">
                 <div className="search m-4 p-4">
                     <input type="text"

@@ -17,7 +17,7 @@ const Header = () => {
     console.log(cartItems);
 
     return (
-    <div className=" flex justify-between  shadow-md ">
+    <div className=" flex justify-between  shadow-md w-full">
         <div className="logo-container p-5 px-10">
             <img src={LOGO_URL}  alt="Logo" className="w-24" />
         </div>
