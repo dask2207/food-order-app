@@ -23,3 +23,13 @@ git config credential.username "new name"
 -HTTPs
 -Tree Shaking - remove unused code
 -Different development and Production Bundles
+
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit and react-redux
+- Build Our Store
+- Connect our store to our app
+- Create Slice (cartSlice)
+- dispatch (action)
+- selector

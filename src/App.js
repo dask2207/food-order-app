@@ -8,6 +8,9 @@ import RestaurentMenu from "./components/RestaurentMenu";
 import Error from "./components/Error";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserContext from "./utils/UserContext";
+import {Provider} from 'react-redux';
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 
 //lazy loading, chunking, codespilliting, Dynamic Bundaling, Dynamix import
@@ -29,12 +32,14 @@ const AppLayout = () => {
 
 
     return (
-        <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
-            <div className="container">
-                <Header />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+                <div className="container">
+                    <Header />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }
 
@@ -61,6 +66,10 @@ const appRouters = createBrowserRouter([
             {
                 path : "/restaurent/:resId",
                 element : <RestaurentMenu />
+            },
+            {
+                path : "/cart",
+                element : <Cart />
             }
         ],
         errorElement: <Error />
