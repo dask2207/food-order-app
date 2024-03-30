@@ -31,13 +31,14 @@ class About extends React.Component {
         const { name, location, avatar_url, url } = this.state.userInfo;
 
         return (
-            <div>
+            <div className="p-10  text-center text-lg font-semibold">
                 <h1>About</h1>
                 <h2>This is About Us Page</h2>
 
                 {/* <img src={avatar_url} /> */}
                 <UserClass name={name}
-                    profile={url} image={avatar_url}
+                    profile={url} 
+                    // image={avatar_url}
                     contact={"9958284356 (Class)"}/>
             </div>
         )

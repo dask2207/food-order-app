@@ -51,14 +51,14 @@ const Body = () => {
 
     return listOfRestaurents.length === 0 ? <Shimmer /> : (
         <div className="body-container w-10/12 m-auto" >
-            <div className="flex">
+            <div className="container w-12/12 justify-center flex flex-wrap">
                 <div className="search m-4 p-4">
                     <input type="text"
-                        className="border border-solid border-grey px-8 py-3 outline-none rounded-bl-lg rounded-tl-lg"
+                        className=" border border-solid border-grey px-8 py-3 outline-none rounded-bl-lg rounded-tl-lg"
                         value={searchText}
                         onChange={(e) => { setSearchTest(e.target.value) }} placeholder="Search..."
                     />
-                    <button className="px-8 py-3 border border-solid border-green bg-green-200 my-4 rounded-tr-lg rounded-br-lg" onClick={() => {
+                    <button className=" px-8 py-3 border border-solid border-green bg-green-200 my-4 rounded-tr-lg rounded-br-lg" onClick={() => {
                         console.log(searchText);
                         const filterRestaurents = listOfRestaurents.filter((res) =>
                             res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -76,13 +76,13 @@ const Body = () => {
                         }>Top Rated Restaurants</button>
                 </div>
 
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                     <label>User Name : </label>
                     <input className="border border-solid border-grey px-8 py-3 outline-none rounded-lg  ms-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)}/>
-                </div>
+                </div> */}
             </div>
 
-            <div className="flex flex-wrap">
+            <div className="w-[100%] m-auto container justify-center flex flex-wrap">
                 {
                     filteredRestaurents.map((resturant, index) =>
 
