@@ -1,12 +1,13 @@
 {
   "name": "food-order-app",
-  "homepage": "https://dask2207.github.io/food-order-app",
+  "homepage": "./",
   "version": "1.0.0",
+  "private": "true",
   "description": "This is Food Order App ",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build src/App.js"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,5 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.16.0"
-  },
-  "main": "babel.config.js"
+  }
 }
