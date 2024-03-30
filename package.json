@@ -1,8 +1,8 @@
 {
-  "name": "namaste-react",
-  "homepage": "https://dask2207.github.io/namaste-react",
+  "name": "food-order-app",
+  "homepage": "https://dask2207.github.io/food-order-app",
   "version": "1.0.0",
-  "description": "This is Namaste React ",
+  "description": "This is Food Order App ",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dask2207/namaste-react.git"
+    "url": "git+https://github.com/dask2207/food-order-app.git"
   },
   "keywords": [],
   "author": "Krishna",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dask2207/namaste-react/issues"
+    "url": "https://github.com/dask2207/food-order-app/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
@@ -41,5 +41,6 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.16.0"
-  }
+  },
+  "main": "babel.config.js"
 }
