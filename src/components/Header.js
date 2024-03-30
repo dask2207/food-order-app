@@ -1,6 +1,7 @@
+import React from "react";
 import { useState, useContext } from "react";
-// import { LOGO_URL } from "../utils/constant";
-import logo from '../images/namaste-logo.png'
+import { LOGO_URL } from "../utils/constant";
+// import logo from '../images/namaste-logo.png'
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -20,7 +21,7 @@ const Header = () => {
     return (
     <div className=" flex justify-between  shadow-md w-full bg-gray-800 text-white">
         <div className="logo-container p-5 px-10">
-            <img src={logo}  alt="Logo" className="w-[85px]" />
+            <img src={LOGO_URL}  alt="Logo" className="w-[85px]" />
         </div>
 
         <div className="flex items-center ">
