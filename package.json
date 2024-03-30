@@ -5,8 +5,8 @@
   "description": "This is Food Order App ",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel src/App.js",
+    "build": "parcel build src/App.js"
   },
   "repository": {
     "type": "git",
