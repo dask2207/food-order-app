@@ -43,3 +43,8 @@ git config credential.username "new name"
 - Configure Parcel Config file to disable default babel transpilation
 - Jest - npx jest --init
 - Install jsdom library
+
+# I package.json 
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
