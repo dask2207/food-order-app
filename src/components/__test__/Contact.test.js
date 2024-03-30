@@ -1,3 +1,4 @@
+import React from "react";
 import {render, screen} from "@testing-library/react";
 import Contact from '../Contact';
 import "@testing-library/jest-dom"
@@ -36,7 +37,7 @@ describe('Contact us page test cases', () => {
     
         const inputBoxes = screen.getAllByRole("textbox");
     
-        console.log(inputBoxes.length);
+        // console.log(inputBoxes.length);
     
         // Assertion
         expect(inputBoxes.length).toBe(3);
