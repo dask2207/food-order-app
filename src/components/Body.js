@@ -53,7 +53,7 @@ const Body = () => {
         <div className="body-container w-10/12 m-auto" >
             <div className="container w-12/12 justify-center flex flex-wrap">
                 <div className="search m-4 p-4">
-                    <input type="text"
+                    <input type="text" data-testid = "inputSearch"
                         className=" border border-solid border-grey px-8 py-3 outline-none rounded-bl-lg rounded-tl-lg"
                         value={searchText}
                         onChange={(e) => { setSearchTest(e.target.value) }} placeholder="Search..."

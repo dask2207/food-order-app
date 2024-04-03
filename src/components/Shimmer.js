@@ -1,11 +1,10 @@
 const Shimmer = () => {
     return <div>
-            <div className="container justify-center flex flex-wrap ">
-                <div >
+            <div className="w-[100%] m-auto container justify-center flex flex-wrap  ">
+                <div className=" ">
                     <button className=" w-[350px] h-[50px]  bg-gray-200 m-4 my-10"></button>
                     <button className=" w-[350px] h-[50px]  bg-gray-200 m-4 my-10"></button>
                     <button className=" w-[300px] h-[50px]  bg-gray-200 m-4 my-10"></button>
-                    <button className=" w-[200px] h-[50px]  bg-gray-200 m-4 my-10"></button>
                 </div>
             </div>
         <div className="w-[100%] m-auto container justify-center flex flex-wrap ">

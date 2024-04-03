@@ -22,7 +22,7 @@ it('should render restaurant card component with props Data', () => {
 
 //     render(<Card resData= {MOCK_DATA} />)
 
-//     const label = screen.getByText("label",{label:"open"});
+//     const label = screen.getByTestId("label",{label:"open"});
 
 //     expect(label).toBeInTheDocument();
 // })
